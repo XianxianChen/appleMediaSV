@@ -18,6 +18,8 @@
 		818BD4552222E8FB005BF8E6 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4542222E8FB005BF8E6 /* MediaCell.swift */; };
 		818BD4572222EF9A005BF8E6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4562222EF9A005BF8E6 /* NetworkHelper.swift */; };
 		818BD4592222EFD7005BF8E6 /* MediaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4582222EFD7005BF8E6 /* MediaAPIClient.swift */; };
+		818BD45D22230188005BF8E6 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD45C22230188005BF8E6 /* EndPoints.swift */; };
+		818BD45F222301BD005BF8E6 /* AppleMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD45E222301BD005BF8E6 /* AppleMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		818BD4542222E8FB005BF8E6 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		818BD4562222EF9A005BF8E6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		818BD4582222EFD7005BF8E6 /* MediaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAPIClient.swift; sourceTree = "<group>"; };
+		818BD45C22230188005BF8E6 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		818BD45E222301BD005BF8E6 /* AppleMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +111,8 @@
 			children = (
 				818BD4212222E5DD005BF8E6 /* AppDelegate.swift */,
 				818BD4232222E5DE005BF8E6 /* ViewController.swift */,
-				818BD4522222E8A8005BF8E6 /* TableView.swift */,
-				818BD4542222E8FB005BF8E6 /* MediaCell.swift */,
-				818BD4562222EF9A005BF8E6 /* NetworkHelper.swift */,
-				818BD4582222EFD7005BF8E6 /* MediaAPIClient.swift */,
+				818BD45B22230137005BF8E6 /* Views */,
+				818BD45A222300CA005BF8E6 /* Model */,
 				818BD42B2222E5DF005BF8E6 /* Assets.xcassets */,
 				818BD42D2222E5DF005BF8E6 /* LaunchScreen.storyboard */,
 				818BD4302222E5DF005BF8E6 /* Info.plist */,
@@ -135,6 +137,26 @@
 				818BD4462222E5DF005BF8E6 /* Info.plist */,
 			);
 			path = appleMediaSVUITests;
+			sourceTree = "<group>";
+		};
+		818BD45A222300CA005BF8E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				818BD4562222EF9A005BF8E6 /* NetworkHelper.swift */,
+				818BD45C22230188005BF8E6 /* EndPoints.swift */,
+				818BD4582222EFD7005BF8E6 /* MediaAPIClient.swift */,
+				818BD45E222301BD005BF8E6 /* AppleMusic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		818BD45B22230137005BF8E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818BD4522222E8A8005BF8E6 /* TableView.swift */,
+				818BD4542222E8FB005BF8E6 /* MediaCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +292,11 @@
 				818BD42A2222E5DE005BF8E6 /* appleMediaSV.xcdatamodeld in Sources */,
 				818BD4532222E8A8005BF8E6 /* TableView.swift in Sources */,
 				818BD4552222E8FB005BF8E6 /* MediaCell.swift in Sources */,
+				818BD45F222301BD005BF8E6 /* AppleMusic.swift in Sources */,
 				818BD4242222E5DE005BF8E6 /* ViewController.swift in Sources */,
 				818BD4572222EF9A005BF8E6 /* NetworkHelper.swift in Sources */,
 				818BD4222222E5DD005BF8E6 /* AppDelegate.swift in Sources */,
+				818BD45D22230188005BF8E6 /* EndPoints.swift in Sources */,
 				818BD4592222EFD7005BF8E6 /* MediaAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

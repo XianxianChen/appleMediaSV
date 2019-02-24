@@ -7,22 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-struct ResultList: Codable {
-    let feed: FeedData
-}
-struct FeedData: Codable {
-    let results: [AppleMusic]
-}
-
-struct AppleMusic:  Codable {
-    let name: String
-    let imageUrl: String
-    enum CodingKeys: String, CodingKey {
-        case name
-        case imageUrl = "artworkUrl100"
-    }
-}
 class MediaAPIClient {
     static let client = MediaAPIClient()
     private init() {}
@@ -46,5 +32,24 @@ class MediaAPIClient {
         
         NetworkHelper.share.performDataTask(with: request, completionHandler: completion, errorHandler: errorHandler)
         
+    }
+}
+
+class ImageAPIClient {
+    static let client = ImageAPIClient()
+    private init() {}
+    public func GetOnlineImages(with urlStr: String, onCompletion: @escaping (UIImage) -> Void, onError: @escaping (Error) -> Void ) {
+        
+        guard let url = URL(string: urlStr) else {
+            print("Bad image url!")
+            return}
+        let request = URLRequest(url: url)
+        let completion: (Data) -> Void = {(data) in
+            guard let image = UIImage(data: data) else {
+                print("bad image data!")
+                return}
+            onCompletion(image)
+        }
+        NetworkHelper.share.performDataTask(with: request, completionHandler: completion, errorHandler: onError)
     }
 }

@@ -8,10 +8,7 @@
 
 import Foundation
 
-struct MediaEndPoint {
-    static let appleMusicStr = "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json"
-    static let ituneMusicStr = "https://rss.itunes.apple.com/api/v1/us/itunes-music/hot-tracks/all/10/explicit.json"
-}
+
 enum AppError: Error {
     case badData
     case badURL(str: String)
