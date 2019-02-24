@@ -9,5 +9,5 @@
 import Foundation
 
 struct MediaEndPoint {
-    static let appleMusicStr = "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json"
+    static let appleMusicStr = "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/50/explicit.json"
 }

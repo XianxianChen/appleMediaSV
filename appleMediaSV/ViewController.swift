@@ -25,6 +25,12 @@ class ViewController: UIViewController {
     }
     func setupView() {
         view.addSubview(tableView)
+        tableView.frame = UIScreen.main.bounds
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     func loadAppleMusics() {
         MediaAPIClient.client.getAppleMusics(completionHandler: {self.appleMusics = $0}, errorHandler: {_ in print("error loading appleMusics")})
