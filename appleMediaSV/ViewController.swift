@@ -46,15 +46,18 @@ extension ViewController:  UITableViewDataSource {
         let index = indexPath.row
         cell.nameLabel.text = appleMusics[index].name
         cell.typeLabel.text = "Apple Music"
+        cell.spiner.startAnimating()
         let imageUrlStr = appleMusics[index].imageUrl
         ImageAPIClient.client.GetOnlineImages(with: imageUrlStr, onCompletion:{
             cell.mediaImageView.image = $0
+            cell.spiner.stopAnimating()
+            cell.spiner.isHidden = true
             cell.layoutIfNeeded()
         }, onError: {_ in print("error loading image")})
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 180
     }
 }
 

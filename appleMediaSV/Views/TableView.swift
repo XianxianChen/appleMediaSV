@@ -19,7 +19,7 @@ class TableView: UITableView {
             fatalError("aDecoder has not been created")
         }
         func setupView() {
-            self.backgroundColor = .blue
+            self.backgroundColor = .white
         }
         
 }

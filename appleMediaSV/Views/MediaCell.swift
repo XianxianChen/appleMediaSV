@@ -37,16 +37,28 @@ class MediaCell: UITableViewCell {
         lab.textColor = .gray
         return lab
     }()
+    lazy var spiner: UIActivityIndicatorView = {
+        let spin = UIActivityIndicatorView(style: .gray)
+        return spin
+    }()
     func setupViews() {
         addSubview(nameLabel)
         addSubview(typeLabel)
         addSubview(mediaImageView)
+        mediaImageView.addSubview(spiner)
         [nameLabel, typeLabel, mediaImageView].forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": typeLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]-10-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": mediaImageView]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[v0(35)]-8-[v1(35)]-8-[v2]-8-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": typeLabel, "v2": mediaImageView]))
+        
+        spiner.translatesAutoresizingMaskIntoConstraints = false
+        spiner.centerXAnchor.constraint(equalTo: mediaImageView.centerXAnchor).isActive = true
+        spiner.centerYAnchor.constraint(equalTo: mediaImageView.centerYAnchor).isActive = true
+        spiner.widthAnchor.constraint(equalTo: mediaImageView.widthAnchor).isActive = true
+        spiner.heightAnchor.constraint(equalTo: mediaImageView.heightAnchor).isActive = true
+        
         
     }
 
