@@ -25,7 +25,28 @@ class MediaCell: UITableViewCell {
         lab.font = UIFont.boldSystemFont(ofSize: 16)
         return lab
     }()
+    lazy var mediaImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        return iv
+    }()
+    lazy var typeLabel: UILabel = {
+        let lab = UILabel()
+        lab.contentMode = .left
+        lab.text = "typeLabel"
+        lab.textColor = .gray
+        return lab
+    }()
     func setupViews() {
+        addSubview(nameLabel)
+        addSubview(typeLabel)
+        addSubview(mediaImageView)
+        [nameLabel, typeLabel, mediaImageView].forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": typeLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]-10-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": mediaImageView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[v0(35)]-8-[v1(35)]-8-[v2]-8-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": typeLabel, "v2": mediaImageView]))
         
     }
 
