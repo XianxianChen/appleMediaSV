@@ -14,6 +14,8 @@
 		818BD42F2222E5DF005BF8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818BD42D2222E5DF005BF8E6 /* LaunchScreen.storyboard */; };
 		818BD43A2222E5DF005BF8E6 /* appleMediaSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4392222E5DF005BF8E6 /* appleMediaSVTests.swift */; };
 		818BD4452222E5DF005BF8E6 /* appleMediaSVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4442222E5DF005BF8E6 /* appleMediaSVUITests.swift */; };
+		818BD4532222E8A8005BF8E6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4522222E8A8005BF8E6 /* TableView.swift */; };
+		818BD4552222E8FB005BF8E6 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BD4542222E8FB005BF8E6 /* MediaCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		818BD4402222E5DF005BF8E6 /* appleMediaSVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appleMediaSVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		818BD4442222E5DF005BF8E6 /* appleMediaSVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleMediaSVUITests.swift; sourceTree = "<group>"; };
 		818BD4462222E5DF005BF8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818BD4522222E8A8005BF8E6 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		818BD4542222E8FB005BF8E6 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				818BD4212222E5DD005BF8E6 /* AppDelegate.swift */,
 				818BD4232222E5DE005BF8E6 /* ViewController.swift */,
+				818BD4522222E8A8005BF8E6 /* TableView.swift */,
+				818BD4542222E8FB005BF8E6 /* MediaCell.swift */,
 				818BD42B2222E5DF005BF8E6 /* Assets.xcassets */,
 				818BD42D2222E5DF005BF8E6 /* LaunchScreen.storyboard */,
 				818BD4302222E5DF005BF8E6 /* Info.plist */,
@@ -256,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				818BD42A2222E5DE005BF8E6 /* appleMediaSV.xcdatamodeld in Sources */,
+				818BD4532222E8A8005BF8E6 /* TableView.swift in Sources */,
+				818BD4552222E8FB005BF8E6 /* MediaCell.swift in Sources */,
 				818BD4242222E5DE005BF8E6 /* ViewController.swift in Sources */,
 				818BD4222222E5DD005BF8E6 /* AppDelegate.swift in Sources */,
 			);
